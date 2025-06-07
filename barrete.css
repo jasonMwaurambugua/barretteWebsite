@@ -1,0 +1,123 @@
+:root {
+  --primary: #ffb600;
+  --dark: #03122d;
+  --light: #f8f9fa;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+nav {
+  background: linear-gradient(90deg, #a87200, var(--primary));
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .2em;
+}
+
+/* Hero */
+.hero {
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(3,18,45,0.6);
+}
+
+.hero .content {
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+}
+
+.hero p {
+  margin-top: 1rem;
+}
+
+section {
+  padding: 60px 0;
+}
+
+#about p {
+  max-width: 700px;
+  margin: auto;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #e6a500;
+}
+
+.service-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+.service-box h5 {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.portfolio-item {
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  transition: transform .3s ease;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.05);
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.team-member h6 {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.contact-info i {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+footer {
+  background: var(--dark);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}

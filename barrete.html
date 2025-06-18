@@ -84,58 +84,140 @@
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="bg-light">
-    <div class="container text-center">
-      <h2>Our Services</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ipsum vitae lacus lobortis lacinia.</p>
-      <div class="row mt-4 g-4">
-        <div class="col-md-4">
-          <div class="service-box">
-            <img src="images/warukuExcav.jpg" alt="Service 1" class="img-fluid">
-            <h5>Service 1</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ipsum vitae lacus.</p>
+<!-- Services Section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="service-box service-hover-carousel position-relative">
+          <div class="service-carousel" id="serviceCarousel1">
+            <img src="images/service1a.jpg" class="img-fluid service-carousel-img active" alt="Service 1a">
+            <img src="images/service1b.jpg" class="img-fluid service-carousel-img" alt="Service 1b">
+            <img src="images/service1c.jpg" class="img-fluid service-carousel-img" alt="Service 1c">
           </div>
+          <h5>Service 1</h5>
+          <p>Short description for Service 1.</p>
         </div>
-        <div class="col-md-4">
-          <div class="service-box">
-            <img src="images/warukuFoundation1.jpg" alt="Service 2" class="img-fluid">
-            <h5>Service 2</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ipsum vitae lacus.</p>
+      </div>
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="service-box service-hover-carousel position-relative">
+          <div class="service-carousel" id="serviceCarousel2">
+            <img src="images/service2a.jpg" class="img-fluid service-carousel-img active" alt="Service 2a">
+            <img src="images/service2b.jpg" class="img-fluid service-carousel-img" alt="Service 2b">
+            <img src="images/service2c.jpg" class="img-fluid service-carousel-img" alt="Service 2c">
           </div>
+          <h5>Service 2</h5>
+          <p>Short description for Service 2.</p>
         </div>
-        <div class="col-md-4">
-          <div class="service-box">
-            <img src="images/warukuScaffolding.jpg" alt="Service 3" class="img-fluid">
-            <h5>Service 3</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ipsum vitae lacus.</p>
+      </div>
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="service-box service-hover-carousel position-relative">
+          <div class="service-carousel" id="serviceCarousel3">
+            <img src="images/service3a.jpg" class="img-fluid service-carousel-img active" alt="Service 3a">
+            <img src="images/service3b.jpg" class="img-fluid service-carousel-img" alt="Service 3b">
+            <img src="images/service3c.jpg" class="img-fluid service-carousel-img" alt="Service 3c">
           </div>
+          <h5>Service 3</h5>
+          <p>Short description for Service 3.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Portfolio -->
-  <section id="portfolio">
-    <div class="container text-center">
-      <h2>Latest Portfolio</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ipsum vitae lacus lobortis lacinia.</p>
-      <div class="row mt-4 g-4">
-        <div class="col-sm-6 col-md-3 portfolio-item">
-          <img src="images/ThindiguaPillars.jpg" alt="Project 1" class="img-fluid rounded">
+<!--Section script Added before closing </body> -->
+<script>
+document.querySelectorAll('.service-hover-carousel').forEach(function(box, idx) {
+  const imgs = box.querySelectorAll('.service-carousel-img');
+  let interval = null;
+  let current = 0;
+  function showImg(i) {
+    imgs.forEach((img, j) => img.classList.toggle('active', j === i));
+  }
+  box.addEventListener('mouseenter', function() {
+    interval = setInterval(() => {
+      current = (current + 1) % imgs.length;
+      showImg(current);
+    }, 400);
+  });
+  box.addEventListener('mouseleave', function() {
+    clearInterval(interval);
+    current = 0;
+    showImg(current);
+  });
+});
+</script>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Portfolio 1 -->
+        <div class="col-md-4">
+          <div class="service-box service-hover-carousel position-relative">
+            <div class="portfolio-carousel" id="portfolioCarousel1">
+              <img src="images/portfolio1a.jpg" class="img-fluid service-carousel-img active" alt="Portfolio 1a">
+              <img src="images/portfolio1b.jpg" class="img-fluid service-carousel-img" alt="Portfolio 1b">
+              <img src="images/portfolio1c.jpg" class="img-fluid service-carousel-img" alt="Portfolio 1c">
+            </div>
+            <h5>Portfolio Project 1</h5>
+            <p>Short description for Portfolio 1.</p>
+          </div>
         </div>
-        <div class="col-sm-6 col-md-3 portfolio-item">
-          <img src="images/warukuFinishing1.jpg" alt="Project 2" class="img-fluid rounded">
+        <!-- Portfolio 2 -->
+        <div class="col-md-4">
+          <div class="service-box service-hover-carousel position-relative">
+            <div class="service-carousel" id="portfolioCarousel2">
+              <img src="images/portfolio2a.jpg" class="img-fluid service-carousel-img active" alt="Portfolio 2a">
+              <img src="images/portfolio2b.jpg" class="img-fluid service-carousel-img" alt="Portfolio 2b">
+              <img src="images/portfolio2c.jpg" class="img-fluid service-carousel-img" alt="Portfolio 2c">
+            </div>
+            <h5>Portfolio Project 2</h5>
+            <p>Short description for Portfolio 2.</p>
+          </div>
         </div>
-        <div class="col-sm-6 col-md-3 portfolio-item">
-          <img src="images/warukuProgress2.jpg" alt="Project 3" class="img-fluid rounded">
-        </div>
-        <div class="col-sm-6 col-md-3 portfolio-item">
-          <img src="images/thindiguaFoundation3.jpg" alt="Project 4" class="img-fluid rounded">
+        <!-- Portfolio 3 -->
+        <div class="col-md-4">
+          <div class="service-box service-hover-carousel position-relative">
+            <div class="service-carousel" id="portfolioCarousel3">
+              <img src="images/portfolio3a.jpg" class="img-fluid service-carousel-img active" alt="Portfolio 3a">
+              <img src="images/portfolio3b.jpg" class="img-fluid service-carousel-img" alt="Portfolio 3b">
+              <img src="images/portfolio3c.jpg" class="img-fluid service-carousel-img" alt="Portfolio 3c">
+            </div>
+            <h5>Portfolio Project 3</h5>
+            <p>Short description for Portfolio 3.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
+  
+  <!-- ...portfolioCarousel Script... -->
+  
+ <script>
+document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEach(function(box) {
+  const imgs = box.querySelectorAll('.service-carousel-img, .portfolio-carousel-img');
+  let interval = null;
+  let current = 0;
+  function showImg(i) {
+    imgs.forEach((img, j) => img.classList.toggle('active', j === i));
+  }
+  box.addEventListener('mouseenter', function() {
+    interval = setInterval(() => {
+      current = (current + 1) % imgs.length
+      showImg(current);
+    }, 400);
+  });
+  box.addEventListener('mouseleave', function() {
+    clearInterval(interval);
+    current = 0;
+    showImg(current);
+  });
+});
+</script>
 
   <!-- Team -->
   <section id="team" class="bg-light">

@@ -166,6 +166,47 @@ section {
   font-weight: 600;
 }
 
+.service-carousel {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  background: #fff;
+}
+
+.service-carousel-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 8px;
+  box-shadow: none;
+  z-index: 1;
+  pointer-events: none;
+}
+.service-carousel-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .service-carousel {
+    height: 160px;
+  }
+}
+@media (max-width: 767.98px) {
+  .service-carousel {
+    height: 120px;
+  }
+}
+
+
 .portfolio-item {
   overflow: hidden;
 }
@@ -176,6 +217,46 @@ section {
 
 .portfolio-item img:hover {
   transform: scale(1.05);
+}
+
+/* Portfolio carousel styles */
+.portfolio-carousel {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  background: #fff;
+}
+
+.portfolio-carousel-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 8px;
+  box-shadow: none;
+  z-index: 1;
+  pointer-events: none;
+}
+.portfolio-carousel-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+@media (max-width: 991.98px) {
+  .portfolio-carousel {
+    height: 160px;
+  }
+}
+@media (max-width: 767.98px) {
+  .portfolio-carousel {
+    height: 120px;
+  }
 }
 
 .team-member img {
@@ -201,3 +282,4 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
+

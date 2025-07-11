@@ -154,6 +154,38 @@ section {
   background: #e6a500;
 }
 
+/* Gradient Read More Buttons for Services & Portfolio */
+.btn-gradient-1  { background: linear-gradient(90deg, #a87200, #ffb600); color: #fff; border: none; }
+.btn-gradient-2  { background: linear-gradient(90deg, #ffb600, #a87200); color: #03122d; border: none; }
+.btn-gradient-3  { background: linear-gradient(90deg, #03122d, #ffb600); color: #fff; border: none; }
+.btn-gradient-4  { background: linear-gradient(90deg, #ffb600, #fff); color: #03122d; border: none; }
+.btn-gradient-5  { background: linear-gradient(90deg, #fff, #a87200); color: #03122d; border: none; }
+.btn-gradient-6  { background: linear-gradient(90deg, #a87200, #03122d); color: #fff; border: none; }
+.btn-gradient-7  { background: linear-gradient(90deg, #03122d, #a87200); color: #ffb600; border: none; }
+.btn-gradient-8  { background: linear-gradient(90deg, #ffb600, #03122d); color: #fff; border: none; }
+.btn-gradient-9  { background: linear-gradient(90deg, #fff, #ffb600); color: #a87200; border: none; }
+.btn-gradient-10 { background: linear-gradient(90deg, #a87200, #fff); color: #03122d; border: none; }
+.btn-gradient-11 { background: linear-gradient(90deg, #03122d, #fff); color: #ffb600; border: none; }
+.btn-gradient-12 { background: linear-gradient(90deg, #fff, #03122d); color: #a87200; border: none; }
+
+.btn-gradient-1:hover,
+.btn-gradient-2:hover,
+.btn-gradient-3:hover,
+.btn-gradient-4:hover,
+.btn-gradient-5:hover,
+.btn-gradient-6:hover,
+.btn-gradient-7:hover,
+.btn-gradient-8:hover,
+.btn-gradient-9:hover,
+.btn-gradient-10:hover,
+.btn-gradient-11:hover,
+.btn-gradient-12:hover {
+  filter: brightness(1.08) saturate(1.2);
+  box-shadow: 0 2px 12px rgba(3,18,45,0.18);
+  transform: translateY(-2px) scale(1.04);
+  color: #fff !important;
+}
+
 .service-box {
   background: #fff;
   border: 1px solid #ddd;

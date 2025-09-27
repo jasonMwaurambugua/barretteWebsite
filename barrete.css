@@ -1,13 +1,34 @@
 :root {
   --primary: #ffb600;
   --dark: #03122d;
+  --surface: #fbfbfb; /* softer white for surfaces to reduce eye strain */
   --light: #f8f9fa;
 }
 
+/* Import additional utilities and overrides (merged from css/barrete-extra.css) */
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   scroll-behavior: smooth;
+  color: #222;
+  font-size: 16px;
+  line-height: 1.6;
 }
+
+/* Headings use Poppins for a modern, clean look */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  margin-top: 0.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--dark);
+}
+
+h1 { font-size: 2rem; font-weight:700; }
+h2 { font-size: 1.6rem; font-weight:600; }
+h3 { font-size: 1.25rem; font-weight:600; }
+h4, h5, h6 { font-size: 1rem; font-weight:600; }
+
+p { font-size: 1rem; color: #333; }
 
 nav {
   background: linear-gradient(90deg, #a87200, var(--primary));
@@ -50,14 +71,14 @@ nav {
 
 .hero-img {
   width: 100%;
-  height: 160vh;
-  max-height: 500px;
+  height: 100%;
+  max-height: none;
+  min-height: 360px; /* sensible minimum so carousel remains visible */
   object-fit: cover;
   object-position: center;
   border-radius: 14px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
   display: block;
-  margin: 0 auto;
 }
 
 @media (max-width: 991.98px) {
@@ -85,6 +106,52 @@ nav {
 .hero .container {
   position: relative;
   z-index: 2;
+}
+
+/* Make carousel column fill hero height and let images cover */
+.hero-carousel {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#heroCarousel .carousel-inner {
+  height: 70vh; /* fill most of the hero area */
+}
+
+#heroCarousel .carousel-inner .carousel-item {
+  height: 100%;
+}
+
+#heroCarousel .carousel-inner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* CTA styles inside hero */
+.hero-ctas {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+}
+.hero-ctas .btn {
+  padding: 0.9rem 1.4rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(3,18,45,0.18);
+}
+
+@media (max-width: 991.98px) {
+  #heroCarousel .carousel-inner { height: 40vh; }
+  .hero-img { min-height: 220px; }
+}
+@media (max-width: 767.98px) {
+  #heroCarousel .carousel-inner { height: 28vh; }
+  .hero-img { min-height: 160px; border-radius: 10px; }
+  .hero-ctas { flex-direction: column; }
 }
 
 .carousel-inner img {
@@ -131,6 +198,12 @@ nav {
     margin-bottom: 1.5rem;
   }
 }
+
+/* -----------------------------
+   Overrides & small utilities
+   Keep site-specific overrides here for neatness
+   ----------------------------- */
+.hero h1 { color: #fff; }
 
 .hero p {
   margin-top: 1rem;
@@ -186,27 +259,43 @@ section {
   color: #fff !important;
 }
 
-.service-box {
-  background: #fff;
+.service-box,
+.portfolio-box {
+  background: var(--surface);
   border: 1px solid #ddd;
-  padding: 20px;
+  padding: 22px;
   text-align: center;
+  /* Make cards a flex column so content aligns and heights can be consistent */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  min-height: 400px; /* slightly reduced and equalized */
 }
 
-.service-box h5 {
-  margin-top: 15px;
+.service-box h5,
+.portfolio-box h5 {
+  margin-top: 12px;
   font-weight: 600;
+  width: 100%;
+  /* Subheading as a full-width pill with theme gradient */
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #fff;
+  background: linear-gradient(90deg, var(--dark), var(--primary));
+  box-shadow: 0 6px 18px rgba(3,18,45,0.12);
 }
 
 .service-carousel {
   position: relative;
   width: 100%;
-  height: 220px;
+  height: 260px; /* slightly larger for more balanced card visuals */
   margin-bottom: 1rem;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-  background: #fff;
+  background: var(--surface);
 }
 
 .service-carousel-img {
@@ -255,12 +344,12 @@ section {
 .portfolio-carousel {
   position: relative;
   width: 100%;
-  height: 220px;
+  height: 260px; /* slightly larger to match services */
   margin-bottom: 1rem;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-  background: #fff;
+  background: var(--surface);
 }
 
 .portfolio-carousel-img {
@@ -285,14 +374,61 @@ section {
     height: 160px;
   }
 }
-@media (max-width: 767.98px) {
-  .portfolio-carousel {
-    height: 120px;
+@media (max-width: 1199.98px) {
+  /* Slightly reduce min-height on medium-large screens */
+  .service-box,
+  .portfolio-box {
+    min-height: 380px;
   }
 }
 
-/* Team Section */
+/* Equal-height rows: ensure columns stretch and cards align vertically */
+.row.g-4.equal-height > [class*="col-"] {
+  display: flex;
+  align-items: stretch;
+}
+.row.g-4.equal-height > [class*="col-"] > .service-box,
+.row.g-4.equal-height > [class*="col-"] > .portfolio-box {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.service-box .btn,
+.portfolio-box .btn {
+  margin-top: auto; /* push buttons to the bottom */
+}
 
+@media (max-width: 991.98px) {
+  .service-carousel,
+  .portfolio-carousel {
+    height: 200px;
+  }
+  .service-box,
+  .portfolio-box {
+    min-height: 340px;
+    padding: 18px;
+  }
+}
+@media (max-width: 767.98px) {
+  .service-carousel,
+  .portfolio-carousel {
+    height: 140px;
+  }
+  .service-box,
+  .portfolio-box {
+    min-height: auto; /* let content flow naturally on small screens */
+    padding: 14px;
+  }
+  .service-box h5,
+  .portfolio-box h5 {
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  /* scale headings on small screens */
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.2rem; }
+}
 #team {
   background: linear-gradient(90deg, #03122d, var(--primary));
   color: #fff;
@@ -320,8 +456,8 @@ section {
   max-height: 500px;
   object-fit: cover;
   box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-  border: 4px solid #fff;
-  background: #fff;
+  border: 4px solid var(--surface);
+  background: var(--surface);
   margin-bottom: 1rem;
 }
 
@@ -358,6 +494,85 @@ section {
 footer {
   background: var(--dark);
   color: #fff;
+
+/* ----- Begin merged css/barrete-extra.css ----- */
+
+/* Extra styles extracted from inline HTML */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Make sure sections are visible below the sticky navbar */
+/* Adjust this value if your navbar height changes */
+#our-services,
+#our-portfolio,
+#our-contact {
+  scroll-margin-top: 90px; /* enough to clear the sticky navbar */
+}
+
+/* Subheading base style */
+.subheading {
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 12px;
+}
+
+/* Gradient utilities matching .btn-gradient-* palette */
+.gradient-1 { background: linear-gradient(90deg, #a87200, #ffb600); }
+.gradient-2 { background: linear-gradient(90deg, #ffb600, #a87200); color: #03122d; }
+.gradient-3 { background: linear-gradient(90deg, #03122d, #ffb600); }
+.gradient-4 { background: linear-gradient(90deg, #ffb600, #fff); color: #03122d; }
+.gradient-5 { background: linear-gradient(90deg, #fff, #a87200); color: #03122d; }
+.gradient-6 { background: linear-gradient(90deg, #a87200, #03122d); }
+.gradient-7 { background: linear-gradient(90deg, #03122d, #a87200); color: #ffb600; }
+.gradient-8 { background: linear-gradient(90deg, #ffb600, #03122d); }
+.gradient-9 { background: linear-gradient(90deg, #fff, #ffb600); color: #a87200; }
+.gradient-10{ background: linear-gradient(90deg, #a87200, #fff); color: #03122d; }
+.gradient-11{ background: linear-gradient(90deg, #03122d, #fff); color: #ffb600; }
+.gradient-12{ background: linear-gradient(90deg, #fff, #03122d); color: #a87200; }
+
+/* Keep subheading pill styles consistent */
+.subheading.gradient-1,
+.subheading.gradient-2,
+.subheading.gradient-3,
+.subheading.gradient-4,
+.subheading.gradient-5,
+.subheading.gradient-6,
+.subheading.gradient-7,
+.subheading.gradient-8,
+.subheading.gradient-9,
+.subheading.gradient-10,
+.subheading.gradient-11,
+.subheading.gradient-12 {
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(3,18,45,0.12);
+  width: 100%;
+}
+
+/* Variant utilities to style buttons and card accents */
+.variant-1 .btn-grad, .variant-1 .btn-gradient-1 { background: linear-gradient(90deg, #a87200, #ffb600); color:#fff; }
+.variant-2 .btn-grad, .variant-2 .btn-gradient-2 { background: linear-gradient(90deg, #ffb600, #a87200); color:#03122d; }
+.variant-3 .btn-grad, .variant-3 .btn-gradient-3 { background: linear-gradient(90deg, #03122d, #ffb600); color:#fff; }
+.variant-4 .btn-grad, .variant-4 .btn-gradient-4 { background: linear-gradient(90deg, #ffb600, #fff); color:#03122d; }
+.variant-5 .btn-grad, .variant-5 .btn-gradient-5 { background: linear-gradient(90deg, #fff, #a87200); color:#03122d; }
+.variant-6 .btn-grad, .variant-6 .btn-gradient-6 { background: linear-gradient(90deg, #a87200, #03122d); color:#fff; }
+.variant-7 .btn-grad, .variant-7 .btn-gradient-7 { background: linear-gradient(90deg, #03122d, #a87200); color:#ffb600; }
+.variant-8 .btn-grad, .variant-8 .btn-gradient-8 { background: linear-gradient(90deg, #ffb600, #03122d); color:#fff; }
+.variant-9 .btn-grad, .variant-9 .btn-gradient-9 { background: linear-gradient(90deg, #fff, #ffb600); color:#a87200; }
+.variant-10 .btn-grad, .variant-10 .btn-gradient-10 { background: linear-gradient(90deg, #a87200, #fff); color:#03122d; }
+.variant-11 .btn-grad, .variant-11 .btn-gradient-11 { background: linear-gradient(90deg, #03122d, #fff); color:#ffb600; }
+.variant-12 .btn-grad, .variant-12 .btn-gradient-12 { background: linear-gradient(90deg, #fff, #03122d); color:#a87200; }
+
+/* small responsive tweak: reduce offset on small screens */
+@media (max-width: 767.98px) {
+  #our-services, #our-portfolio, #our-contact { scroll-margin-top: 64px; }
+}
+
+/* ----- End merged css/barrete-extra.css ----- */
   padding: 20px 0;
   text-align: center;
 }

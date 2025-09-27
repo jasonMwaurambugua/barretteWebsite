@@ -6,6 +6,8 @@
   <title>Barrete Constructions</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts: Inter (body) and Poppins (headings) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <!-- Custom Stylesheet -->
   <link href="barrete.css" rel="stylesheet">
 </head>
@@ -21,10 +23,10 @@
         <ul class="navbar-nav ms-auto gap-3">
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#our-services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#our-portfolio">Portfolio</a></li>
           <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#our-contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -38,8 +40,12 @@
         <div class="col-lg-6 text-white text-center text-lg-start mb-4 mb-lg-0">
           <h1 class="display-4 fw-bold">Barrete Constructions</h1>
           <p class="lead">Constructing Your Dreams into Reality</p>
+          <div class="hero-ctas">
+            <a href="#our-contact" class="btn btn-primary btn-lg">Get a Quote</a>
+            <a href="#our-portfolio" class="btn btn-outline-light btn-lg">View Portfolio</a>
+          </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 hero-carousel">
           <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
                      
           <div class="carousel-inner rounded shadow">
@@ -95,91 +101,104 @@ pictorial relay system.</p>
     </div>
   </section>
 
+<h1 id="our-services" class="text-center my-4">Our Services</h1>
+
 <!-- Services Section -->
 <section id="services" class="py-5">
   <div class="container">
-    <div class="row g-4">
+  <div class="row g-4 equal-height">
 
       <!-- Service 1: Drawing Solutions -->
-      <div class="col-md-4">
-        <div class="service-box service-hover-carousel position-relative">
+  <div class="col-md-4">
+  <div class="service-box service-hover-carousel position-relative variant-1">
           <div class="service-carousel" id="serviceCarousel1">
             <img src="images/warukuExcav.jpg" class="img-fluid service-carousel-img active" alt="Service 1a">
             <img src="images/ThindiguaPillars.jpg" class="img-fluid service-carousel-img" alt="Service 1b">
             <img src="images/warukuProgress2.jpg" class="img-fluid service-carousel-img" alt="Service 1c">
           </div>
-          <h5>Drawing Solutions</h5>
-          <p>Short description for Service 1.</p>
+          <h5 class="subheading gradient-1">Drawing Solutions</h5>
+          <p>we offer services in
+Architectural (rendered & design details)
+accompanied by structural drawings. Our
+competent team includes licensed architects
+and Engineers (Electrical, Mechanical and
+Structural)
+ County Pre-approval Solutions; We directly assist our clients in obtaining the necessary permits and approvals from local authorities.</p>
                     <a href="#" class="btn btn-sm btn-gradient-1 mt-2" data-bs-toggle="modal" data-bs-target="#serviceModal1">Read More</a>
         </div>
       </div>
 
       <!-- Service 2: Fabrications-->
-      <div class="col-md-4">
-        <div class="service-box service-hover-carousel position-relative">
+  <div class="col-md-4">
+  <div class="service-box service-hover-carousel position-relative variant-2">
           <div class="service-carousel" id="serviceCarousel2">
             <img src="images/thindiguaFoundation1.jpg" class="img-fluid service-carousel-img active" alt="Service 2a">
             <img src="images/thindiguaFoundation2.jpg" class="img-fluid service-carousel-img" alt="Service 2b">
             <img src="images/thindiguaFoundation3.jpg" class="img-fluid service-carousel-img" alt="Service 2c">
           </div>
-          <h5>Steel Works and Metal Fabrications </h5>
-          <p>Short description for Service 2.</p>
+          <h5 class="subheading gradient-2">Steel Works and Metal Fabrications </h5>
+          <p>We specialize in steel works and metal fabrications, offering a range of services to meet the needs of our clients.<br/>
+             Our team is equipped to handle projects of all sizes, ensuring quality and precision in every aspect of the fabrication process.</p>
                     <a href="#" class="btn btn-sm btn-gradient-2 mt-2" data-bs-toggle="modal" data-bs-target="#serviceModal2">Read More</a>
         </div>
       </div>
 
       <!-- Service 3: Plumbing and Electrical Installations -->
-      <div class="col-md-4">
-        <div class="service-box service-hover-carousel position-relative">
+  <div class="col-md-4">
+  <div class="service-box service-hover-carousel position-relative variant-3">
           <div class="service-carousel" id="serviceCarousel3">
             <img src="images/warukuExcav.jpg" class="img-fluid service-carousel-img active" alt="Service 3a">
             <img src="images/warukuFoundation.jpg" class="img-fluid service-carousel-img" alt="Service 3b">
             <img src="images/warukuProgress.jpg" class="img-fluid service-carousel-img" alt="Service 3c">
           </div>
-          <h5>Plumbing and Electrical Installations</h5>
-          <p>Short description for Service 3.</p>
+          <h5 class="subheading gradient-3">Plumbing and Electrical Installations</h5>
+          <p>We provide comprehensive plumbing and electrical installation services, ensuring that all systems are safely and efficiently integrated into your project.<br/>
+             Our skilled technicians are experienced in both residential and commercial installations.</p>
                     <a href="#" class="btn btn-sm btn-gradient-3 mt-2" data-bs-toggle="modal" data-bs-target="#serviceModal3">Read More</a>
         </div>
       </div>
 
       <!-- Service 4: Excavations -->
-      <div class="col-md-4">
-        <div class="service-box service-hover-carousel position-relative">
+  <div class="col-md-4">
+  <div class="service-box service-hover-carousel position-relative variant-4">
           <div class="service-carousel" id="serviceCarousel4">
             <img src="images/warukuProgress.jpg" class="img-fluid service-carousel-img active" alt="Service 4a">
             <img src="images/warukuProgress2.jpg" class="img-fluid service-carousel-img" alt="Service 4b">
             <img src="images/warukuProgress3.jpg" class="img-fluid service-carousel-img" alt="Service 4c">
           </div>
-          <h5>Excavation and Site Solutions</h5>
-          <p>Short description for Service 4.</p>
+          <h5 class="subheading gradient-4">Excavation and Site Solutions</h5>
+          <p>We offer excavation and site preparation services, including earthworks, grading, and trenching. <br/>
+             Our experienced team ensures that all excavation work is carried out safely and efficiently, adhering to all relevant regulations and standards.</p>
                     <a href="#" class="btn btn-sm btn-gradient-4 mt-2" data-bs-toggle="modal" data-bs-target="#serviceModal4">Read More</a>
         </div>
     </div>
 
       <!-- Service 5: Construction Logistics -->
-      <div class="col-md-4">
-        <div class="service-box service-hover-carousel position-relative">
+  <div class="col-md-4">
+  <div class="service-box service-hover-carousel position-relative variant-5">
           <div class="service-carousel" id="serviceCarousel5">
             <img src="images/warukuFinishing1.jpg" class="img-fluid service-carousel-img active" alt="Service 5a">
             <img src="images/warukuScaffolding.jpg" class="img-fluid service-carousel-img" alt="Service 5b">
             <img src="images/WarukuFinishUp.jpg" class="img-fluid service-carousel-img" alt="Service 5c">
           </div>
-          <h5>Construction Logistics</h5>
-          <p>Short description for Service 5.</p>
+          <h5 class="subheading gradient-5">Construction Logistics</h5>
+          <p>We provide comprehensive construction logistics services, ensuring that all materials and equipment are delivered to the site on time and in good condition.<br/>
+             Our team is experienced in coordinating complex logistics operations, minimizing delays and maximizing efficiency.</p>
                     <a href="#" class="btn btn-sm btn-gradient-5 mt-2" data-bs-toggle="modal" data-bs-target="#serviceModal5">Read More</a>
         </div>
       </div>
 
       <!-- Service 6: Project Management -->
-      <div class="col-md-4">
-        <div class="service-box service-hover-carousel position-relative">
+  <div class="col-md-4">
+  <div class="service-box service-hover-carousel position-relative variant-6">
           <div class="service-carousel" id="serviceCarousel6">
             <img src="images/warukuScaffolding.jpg" class="img-fluid service-carousel-img active" alt="Service 6a">
             <img src="images/warukuFinishing1.jpg" class="img-fluid service-carousel-img" alt="Service 6b">
             <img src="images/warukuProgress2.jpg" class="img-fluid service-carousel-img" alt="Service 6c">
           </div>
-          <h5>Project Management</h5>
-          <p>Short description for Service 6.</p>
+          <h5 class="subheading gradient-6">Project Management</h5>
+          <p>We offer comprehensive project management services, ensuring that your construction project is completed on time and within budget.<br/>
+             Our experienced project managers coordinate all aspects of the project, from planning and scheduling to execution and monitoring.</p>
                     <a href="#" class="btn btn-sm btn-gradient-6 mt-2" data-bs-toggle="modal" data-bs-target="#serviceModal6">Read More</a>
         </div>
       </div>  
@@ -188,27 +207,29 @@ pictorial relay system.</p>
 
 <!-- Portfolio Section -->
 
+<h1 id="our-portfolio" class="text-center my-4">Our Portfolio</h1>
+
 <section id="portfolio" class="py-5">
   <div class="container">
-    <div class="row g-4">
+  <div class="row g-4 equal-height">
 
       <!-- Portfolio: 1 Muthaiga North -->
       <div class="col-md-4">
-        <div class="portfolio-box portfolio-hover-carousel position-relative">
+        <div class="portfolio-box portfolio-hover-carousel position-relative variant-7">
           <div class="portfolio-carousel" id="portfolioCarousel1">
             <img src="images/MNorth1.JPG" class="img-fluid portfolio-carousel-img active" alt="Portfolio 1a">
             <img src="images/MNorth4.JPG" class="img-fluid portfolio-carousel-img" alt="Portfolio 1b">
             <img src="images/MNorth6.JPG" class="img-fluid portfolio-carousel-img" alt="Portfolio 1c">
           </div>
-          <h5>Muthaiga North Residence</h5>
-          <p>Short description for Portfolio 1.</p>
+          <h5 class="subheading gradient-7">Muthaiga North Residence</h5>
+          <p>We undertook a comprehensive renovation of this upscale residence, focusing on modernizing the interior while preserving its classic charm.<br/>
                     <a href="#" class="btn btn-sm btn-gradient-7 mt-2" data-bs-toggle="modal" data-bs-target="#portfolioModal1">Read More</a>
         </div>
       </div>
 
       <!-- Portfolio 2: Goigwa Project -->
       <div class="col-md-4">
-        <div class="portfolio-box portfolio-hover-carousel position-relative">
+        <div class="portfolio-box portfolio-hover-carousel position-relative variant-8">
           <div class="portfolio-carousel" id="portfolioCarousel2">
             <img src="images/Goigwa2Project.jpg" class="img-fluid portfolio-carousel-img active" alt="Portfolio 2a">
             <img src="images/Goigwa2Project1.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 2b">
@@ -216,15 +237,16 @@ pictorial relay system.</p>
             <img src="images/Goigwa2Project3.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 2d">
             <img src="images/Goigwa2Project4.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 2e">
           </div>
-          <h5> Goigwa Villa </h5>
-          <p>Short description for Portfolio 2.</p>
+          <h5 class="subheading gradient-8"> Goigwa Villa </h5>
+          <p> We completed the construction of this luxurious villa, featuring modern design elements and high-end finishes.<br/>
+             The project was delivered on time and has received rave reviews from the client.</p>
                     <a href="#" class="btn btn-sm btn-gradient-8 mt-2" data-bs-toggle="modal" data-bs-target="#portfolioModal2">Read More</a>
         </div>
       </div>
 
       <!-- Portfolio 3: Rongai Flats -->
       <div class="col-md-4">
-        <div class="portfolio-box portfolio-hover-carousel position-relative">
+        <div class="portfolio-box portfolio-hover-carousel position-relative variant-9">
           <div class="portfolio-carousel" id="portfolioCarousel3">
             <img src="images/RongaiFinish2.jpg" class="img-fluid portfolio-carousel-img active" alt="Portfolio 3a">
             <img src="images/RongaiFinish.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 3b">
@@ -232,30 +254,32 @@ pictorial relay system.</p>
             <img src="images/RongaiFinish3.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 3d">
             <img src="images/RongaiProgress2.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 3e">
           </div>
-          <h5>Rongai Flats</h5>
-          <p>Short description for Portfolio 3.</p>
+          <h5 class="subheading gradient-9">Rongai Flats</h5>
+          <p>We completed the construction of these modern flats, designed to provide comfortable living spaces with contemporary finishes.<br/>
+             The project was completed ahead of schedule and has been well-received by the residents.</p>
                     <a href="#" class="btn btn-sm btn-gradient-9 mt-2" data-bs-toggle="modal" data-bs-target="#portfolioModal3">Read More</a>
         </div>
       </div>
 
       <!-- Portfolio 4: Thindigua Apartments -->
       <div class="col-md-4">
-        <div class="portfolio-box portfolio-hover-carousel position-relative">
+        <div class="portfolio-box portfolio-hover-carousel position-relative variant-10">
           <div class="portfolio-carousel" id="portfolioCarousel4">
             <img src="images/thindiguaProggress.jpg" class="img-fluid portfolio-carousel-img active" alt="Portfolio 4a">
             <img src="images/apartment1.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 4b">
             <img src="images/apartments3.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 4c">
             <img src="images/apartments.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 4d">
           </div>
-          <h5>Thindigua Apartments</h5>
-          <p>Short description for Portfolio 4.</p>
+          <h5 class="subheading gradient-10">Thindigua Apartments</h5>
+          <p>We completed the construction of these modern apartments, designed to provide comfortable living spaces with contemporary finishes.<br/>
+             The project was delivered on time and has received positive feedback from the residents.</p>
                     <a href="#" class="btn btn-sm btn-gradient-10 mt-2" data-bs-toggle="modal" data-bs-target="#portfolioModal4">Read More</a>
         </div>
       </div>
 
       <!-- Portfolio 5: Waruku Flats -->
       <div class="col-md-4">
-        <div class="portfolio-box portfolio-hover-carousel position-relative">
+        <div class="portfolio-box portfolio-hover-carousel position-relative variant-11">
           <div class="portfolio-carousel" id="portfolioCarousel5">
             <img src="images/warukuScaffolding.jpg" class="img-fluid portfolio-carousel-img active" alt="Portfolio 5a">
             <img src="images/warukuProgress.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 5b">
@@ -263,22 +287,24 @@ pictorial relay system.</p>
             <img src="images/warukuProgress2.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 5d">
             <img src="images/warukuProgress3.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 5e">
           </div>
-          <h5>Waruku Apartments</h5>
-          <p>Short description for Portfolio 5.</p>
+          <h5 class="subheading gradient-11">Waruku Apartments</h5>
+          <p>We completed the construction of these modern apartments, designed to provide comfortable living spaces with contemporary finishes.<br/>
+             The project was delivered on time and has received positive feedback from the residents.</p>
                     <a href="#" class="btn btn-sm btn-gradient-11 mt-2" data-bs-toggle="modal" data-bs-target="#portfolioModal5">Read More</a>
         </div>
       </div>
 
       <!-- Portfolio 6: Conclusion; features all finished projects carousel -->
       <div class="col-md-4">
-        <div class="portfolio-box portfolio-hover-carousel position-relative">
+        <div class="portfolio-box portfolio-hover-carousel position-relative variant-12">
           <div class="portfolio-carousel" id="portfolioCarousel6">
             <img src="images/portfolio6a.jpg" class="img-fluid portfolio-carousel-img active" alt="Portfolio 6a">
             <img src="images/portfolio6b.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 6b">
             <img src="images/portfolio6c.jpg" class="img-fluid portfolio-carousel-img" alt="Portfolio 6c">
           </div>
-          <h5>Portfolio 6</h5>
-          <p>Short description for Portfolio 6.</p>
+          <h5 class="subheading gradient-12">Portfolio 6</h5>
+          <p>We showcased our expertise in delivering high-quality construction projects through this comprehensive portfolio.<br/>
+             Each project highlights our commitment to excellence and customer satisfaction.</p>
                     <a href="#" class="btn btn-sm btn-gradient-12 mt-2" data-bs-toggle="modal" data-bs-target="#portfolioModal6">Read More</a>
         </div>
       </div>
@@ -315,13 +341,14 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
 
  <!-- service Modals-->
 <div>
+
   <!-- Service 1 Modal: Drawing Solutions -->
 
   <div class="modal fade" id="serviceModal1" tabindex="-1" aria-labelledby="serviceModal1Label" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="serviceModal1Label">Service 1</h5>
+          <h5 class="modal-title" id="serviceModal1Label">Drawing Solutions</h5>
           <span class="badge bg-warning ms-3">Ongoing</span>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
@@ -335,7 +362,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <button class="carousel-control-prev" type="button" data-bs-target="#serviceModalCarousel1" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#serviceModalCarousel1" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
           </div>
-          <p><strong>Description:</strong> Detailed info about Service 1.</p>
+          <p><strong>Description:</strong> We provide comprehensive drawing solutions, including architectural, structural, and MEP drawings, tailored to meet the specific needs of each project.</p>
         </div>
       </div>
     </div>
@@ -347,7 +374,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="serviceModal2Label">Service 2</h5>
+          <h5 class="modal-title" id="serviceModal2Label">Steel Works and Fabrications</h5>
           <span class="badge bg-success ms-3">Complete</span>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
@@ -361,7 +388,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <button class="carousel-control-prev" type="button" data-bs-target="#serviceModalCarousel2" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#serviceModalCarousel2" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
           </div>
-          <p><strong>Description:</strong> Detailed info about Service 2.</p>
+          <p><strong>Description:</strong> We specialize in steel works and fabrications, offering a wide range of services from structural steel fabrication to custom metalwork solutions.</p>
         </div>
       </div>
     </div>
@@ -373,7 +400,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="serviceModal3Label">Service 3</h5>
+          <h5 class="modal-title" id="serviceModal3Label"> Plumbing and Electrical Installations </h5>
           <span class="badge bg-warning ms-3">Ongoing</span>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
@@ -387,7 +414,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <button class="carousel-control-prev" type="button" data-bs-target="#serviceModalCarousel3" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#serviceModalCarousel3" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
           </div>
-          <p><strong>Description:</strong> Detailed info about Service 3.</p>
+          <p><strong>Description:</strong> We offer comprehensive plumbing and electrical installation services, ensuring all systems are up to code and functioning optimally.</p>
         </div>
       </div>
     </div>
@@ -399,7 +426,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="serviceModal4Label">Service 4</h5>
+          <h5 class="modal-title" id="serviceModal4Label">Excavations and Site Solutions</h5>
           <span class="badge bg-success ms-3">Complete</span>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
@@ -413,7 +440,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <button class="carousel-control-prev" type="button" data-bs-target="#serviceModalCarousel4" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#serviceModalCarousel4" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
           </div>
-          <p><strong>Description:</strong> Detailed info about Service 4.</p>
+          <p><strong>Description:</strong> We provide excavation and site preparation services, ensuring a solid foundation for your construction projects.</p>
         </div>
       </div>
     </div>
@@ -423,7 +450,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="serviceModal5Label">Service 5</h5>
+          <h5 class="modal-title" id="serviceModal5Label">Construction Logistics</h5>
           <span class="badge bg-warning ms-3">Ongoing</span>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
@@ -437,7 +464,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <button class="carousel-control-prev" type="button" data-bs-target="#serviceModalCarousel5" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#serviceModalCarousel5" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
           </div>
-          <p><strong>Description:</strong> Detailed info about Service 5.</p>
+          <p><strong>Description:</strong> We manage all aspects of construction logistics, ensuring timely delivery of materials and efficient site management.</p>
         </div>
       </div>
     </div>
@@ -449,7 +476,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="serviceModal6Label">Service 6</h5>
+          <h5 class="modal-title" id="serviceModal6Label">Project Management</h5>
           <span class="badge bg-success ms-3">Complete</span>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
@@ -463,7 +490,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <button class="carousel-control-prev" type="button" data-bs-target="#serviceModalCarousel6" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#serviceModalCarousel6" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
           </div>
-          <p><strong>Description:</strong> Detailed info about Service 6.</p>
+          <p><strong>Description:</strong> We offer comprehensive project management services, ensuring that your construction projects are completed on time and within budget.</p>
         </div>
       </div>
     </div>
@@ -471,6 +498,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
 </div>
 
 <!-- Portfolio Modals -->
+ 
 
  <!-- Portfolio 1 Modal: Muthaiga North Residence -->
 <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1Label" aria-hidden="true">
@@ -497,7 +525,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <span class="carousel-control-next-icon"></span>
           </button>
         </div>
-        <p><strong>Description:</strong> Detailed info about Muthaiga North Residence.</p>
+        <p><strong>Description:</strong> This project involved the construction of a luxurious residence in Muthaiga North, featuring modern architectural designs and high-end finishes.</p>
       </div>
     </div>
   </div>
@@ -528,7 +556,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <span class="carousel-control-next-icon"></span>
           </button>
         </div>
-        <p><strong>Description:</strong> Detailed info about Goigwa Villa.</p>
+        <p><strong>Description:</strong> This project is currently ongoing and involves the construction of a modern villa in Goigwa, featuring spacious interiors and high-quality finishes.</p>
       </div>
     </div>
   </div>
@@ -560,7 +588,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <button class="carousel-control-prev" type="button" data-bs-target="#portfolioModalCarousel3" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#portfolioModalCarousel3" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
           </div>
-          <p><strong>Description:</strong> Detailed info about Rongai Flats.</p>
+          <p><strong>Description:</strong> This project involved the construction of modern flats in Rongai, designed to provide comfortable and affordable housing.</p>
         </div>
       </div>
     </div>
@@ -590,7 +618,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <button class="carousel-control-prev" type="button" data-bs-target="#portfolioModalCarousel4" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#portfolioModalCarousel4" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
           </div>
-          <p><strong>Description:</strong> Detailed info about Thindigua Apartments.</p>
+          <p><strong>Description:</strong> This project involves the construction of modern apartments in Thindigua, designed to offer a blend of comfort and style.</p>
         </div>
       </div>
     </div>
@@ -621,7 +649,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <button class="carousel-control-prev" type="button" data-bs-target="#portfolioModalCarousel5" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#portfolioModalCarousel5" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
           </div>
-          <p><strong>Description:</strong> Detailed info about Waruku Apartments.</p>
+          <p><strong>Description:</strong> This project involves the construction of modern apartments in Waruku, designed to offer a blend of comfort and style.</p>
         </div>
       </div>
     </div>
@@ -647,7 +675,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
             <button class="carousel-control-prev" type="button" data-bs-target="#portfolioModalCarousel6" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#portfolioModalCarousel6" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
           </div>
-          <p><strong>Description:</strong> Detailed info about Portfolio 6.</p>
+          <p><strong>Description:</strong> This project is currently ongoing and involves the construction of a modern office building in Nairobi's central business district, featuring state-of-the-art facilities and sustainable design.</p>
         </div>
       </div>
     </div>
@@ -698,7 +726,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
   <!-- Contact -->
   <section id="contact">
     <div class="container">
-      <h2 class="text-center">Get in Touch</h2>
+      <h2 id="our-contact" class="text-center">Get in Touch</h2>
       <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ipsum vitae lacus lobortis lacinia.</p>
       <div class="row mt-4">
         <div class="col-md-6">
@@ -733,5 +761,7 @@ document.querySelectorAll('.service-hover-carousel, .portfolio-carousel').forEac
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- External extra styles and scripts -->
+  <script src="js/barrete.js"></script>
 </body>
 </html>

@@ -1,0 +1,74 @@
+/* Extra styles extracted from inline HTML */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Make sure sections are visible below the sticky navbar */
+/* Adjust this value if your navbar height changes */
+#our-services,
+#our-portfolio,
+#our-contact {
+  scroll-margin-top: 90px; /* enough to clear the sticky navbar */
+}
+
+/* Subheading base style */
+.subheading {
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 12px;
+}
+
+/* Gradient utilities matching .btn-gradient-* palette */
+.gradient-1 { background: linear-gradient(90deg, #a87200, #ffb600); }
+.gradient-2 { background: linear-gradient(90deg, #ffb600, #a87200); color: #03122d; }
+.gradient-3 { background: linear-gradient(90deg, #03122d, #ffb600); }
+.gradient-4 { background: linear-gradient(90deg, #ffb600, #fff); color: #03122d; }
+.gradient-5 { background: linear-gradient(90deg, #fff, #a87200); color: #03122d; }
+.gradient-6 { background: linear-gradient(90deg, #a87200, #03122d); }
+.gradient-7 { background: linear-gradient(90deg, #03122d, #a87200); color: #ffb600; }
+.gradient-8 { background: linear-gradient(90deg, #ffb600, #03122d); }
+.gradient-9 { background: linear-gradient(90deg, #fff, #ffb600); color: #a87200; }
+.gradient-10{ background: linear-gradient(90deg, #a87200, #fff); color: #03122d; }
+.gradient-11{ background: linear-gradient(90deg, #03122d, #fff); color: #ffb600; }
+.gradient-12{ background: linear-gradient(90deg, #fff, #03122d); color: #a87200; }
+
+/* Keep subheading pill styles consistent */
+.subheading.gradient-1,
+.subheading.gradient-2,
+.subheading.gradient-3,
+.subheading.gradient-4,
+.subheading.gradient-5,
+.subheading.gradient-6,
+.subheading.gradient-7,
+.subheading.gradient-8,
+.subheading.gradient-9,
+.subheading.gradient-10,
+.subheading.gradient-11,
+.subheading.gradient-12 {
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(3,18,45,0.12);
+  width: 100%;
+}
+
+/* Variant utilities to style buttons and card accents */
+.variant-1 .btn-grad, .variant-1 .btn-gradient-1 { background: linear-gradient(90deg, #a87200, #ffb600); color:#fff; }
+.variant-2 .btn-grad, .variant-2 .btn-gradient-2 { background: linear-gradient(90deg, #ffb600, #a87200); color:#03122d; }
+.variant-3 .btn-grad, .variant-3 .btn-gradient-3 { background: linear-gradient(90deg, #03122d, #ffb600); color:#fff; }
+.variant-4 .btn-grad, .variant-4 .btn-gradient-4 { background: linear-gradient(90deg, #ffb600, #fff); color:#03122d; }
+.variant-5 .btn-grad, .variant-5 .btn-gradient-5 { background: linear-gradient(90deg, #fff, #a87200); color:#03122d; }
+.variant-6 .btn-grad, .variant-6 .btn-gradient-6 { background: linear-gradient(90deg, #a87200, #03122d); color:#fff; }
+.variant-7 .btn-grad, .variant-7 .btn-gradient-7 { background: linear-gradient(90deg, #03122d, #a87200); color:#ffb600; }
+.variant-8 .btn-grad, .variant-8 .btn-gradient-8 { background: linear-gradient(90deg, #ffb600, #03122d); color:#fff; }
+.variant-9 .btn-grad, .variant-9 .btn-gradient-9 { background: linear-gradient(90deg, #fff, #ffb600); color:#a87200; }
+.variant-10 .btn-grad, .variant-10 .btn-gradient-10 { background: linear-gradient(90deg, #a87200, #fff); color:#03122d; }
+.variant-11 .btn-grad, .variant-11 .btn-gradient-11 { background: linear-gradient(90deg, #03122d, #fff); color:#ffb600; }
+.variant-12 .btn-grad, .variant-12 .btn-gradient-12 { background: linear-gradient(90deg, #fff, #03122d); color:#a87200; }
+
+/* small responsive tweak: reduce offset on small screens */
+@media (max-width: 767.98px) {
+  #our-services, #our-portfolio, #our-contact { scroll-margin-top: 64px; }
+}
